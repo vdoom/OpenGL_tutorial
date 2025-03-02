@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 3.20)
 project (tutor)
 
 set(INCLUDE_DIR ./)
@@ -35,7 +35,6 @@ link_libraries(${OPENGL_LIBRARIES})
 
 add_executable(tutor main.cpp)
 
-#target_link_libraries (OBJViewer Fregat)
 
 # Creates a folder "executables" and adds target 
 # project (app.vcproj) under it
@@ -47,3 +46,5 @@ set_target_properties(tutor PROPERTIES
 					  
 install (TARGETS tutor
          RUNTIME DESTINATION ${PROJECT_SOURCE_DIR}/_install)
+
+include(../cmake/shaders_n_runtimelibs.cmake)
