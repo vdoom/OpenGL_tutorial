@@ -1,11 +1,9 @@
 cmake_minimum_required (VERSION 3.20)
 project (OpenGL_tutor)
 
-set(INCLUDE_DIR ./)
-include_directories(${INCLUDE_DIR})
-
+#CMake predefined targets goes to separate solution fold
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-message ("cxx Flags: " ${CMAKE_CXX_FLAGS})
+#message ("cxx Flags: " ${CMAKE_CXX_FLAGS})
 
 include(cmake/3rd_party.cmake)
 
